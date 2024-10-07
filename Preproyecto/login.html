@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+</head>
+<body>
+    <h1>Iniciar Sesión</h1>
+    <form method="POST" action="{{ url_for('login') }}">
+        {{ form.hidden_tag() }}
+        {{ form.usuario.label }} {{ form.usuario(size=32) }}<br>
+        {{ form.contraseña.label }} {{ form.contraseña(size=32) }}<br>
+        {{ form.submit() }}
+    </form>
+    <button onclick="history.back()">Regresar</button>
+</body>
+</html>

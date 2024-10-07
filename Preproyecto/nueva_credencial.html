@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nueva Credencial</title>
+</head>
+<body>
+    <h1>Agregar Nueva Credencial</h1>
+    <form method="POST" action="{{ url_for('nueva_credencial') }}">
+        {{ form.hidden_tag() }}
+        {{ form.sitio.label }} {{ form.sitio(size=32) }}<br>
+        {{ form.correo.label }} {{ form.correo(size=32) }}<br>
+        {{ form.usuario.label }} {{ form.usuario(size=32) }}<br>
+        {{ form.contraseña.label }} {{ form.contraseña(size=32) }}<br>
+        {{ form.coleccion_id.label }} {{ form.coleccion_id() }}<br>
+        {{ form.nota.label }} {{ form.nota() }}<br>
+        {{ form.submit() }}
+    </form>
+    <button onclick="history.back()">Regresar</button>
+</body>
+</html>

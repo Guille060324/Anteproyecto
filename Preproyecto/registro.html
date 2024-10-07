@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+</head>
+<body>
+    <h1>Registro de Usuario</h1>
+    <form method="POST" action="{{ url_for('registro') }}">
+        {{ form.hidden_tag() }}
+        {{ form.nombre.label }} {{ form.nombre(size=32) }}<br>
+        {{ form.apellido.label }} {{ form.apellido(size=32) }}<br>
+        {{ form.correo.label }} {{ form.correo(size=32) }}<br>
+        {{ form.celular.label }} {{ form.celular(size=32) }}<br>
+        {{ form.usuario.label }} {{ form.usuario(size=32) }}<br>
+        {{ form.contraseña.label }} {{ form.contraseña(size=32) }}<br>
+        {{ form.submit() }}
+    </form>
+    <button onclick="history.back()">Regresar</button>
+</body>
+</html>
